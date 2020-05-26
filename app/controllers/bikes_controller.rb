@@ -3,3 +3,4 @@ class BikesController < ApplicationController
    @bikes = Bike.all
   end
 end
+
