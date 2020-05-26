@@ -8,7 +8,7 @@
 Bike.destroy_all
 User.destroy_all
 
-user1 = User.create(email: "holly@gmail.com", password: "123456")
+user1 = User.create(user_name:"holly" email: "holly@gmail.com", password: "123456")
 Bike.create!([{
   model: "Pashley",
   bike_type: "Utility bike",
@@ -16,7 +16,7 @@ Bike.create!([{
   user: user1
 }])
 
-user2 = User.create(email: "ann@gmail.com", password: "123456")
+user2 = User.create(user_name:"ann" email: "ann@gmail.com", password: "123456")
 Bike.create!([{
   model: "Pashley",
   bike_type: "Long Tail",
@@ -24,7 +24,7 @@ Bike.create!([{
   user: user2
 }])
 
-user3 = User.create(email: "alex@gmail.com", password: "123456")
+user3 = User.create( user_name: "alex" email: "alex@gmail.com", password: "123456")
 Bike.create!([{
   model: "Pashley",
   bike_type: "Bakfiets",
