@@ -1,5 +1,14 @@
 <ul>
   <% @bikes.each do |bike| %>
-    <li class="card"><%= bike.bike_type %></li>
-  <% end %>
+    <li class="card">
+    	<div class="card-product">
+         <div class="card-product-infos" justify="center">
+		    <h2><%= bike.bike_type %></h2>
+		    <%= link_to(image_tag("cargobike.png", :alt =>  "alt text"), '1') %>
+		    <p>Product description with <strong>relevant info</strong> only.</p>
+		    <p>Price/day <strong>20 EUR</strong> only.</p>
+		  </div>
+          <% end %>
+      </div>
+  </li> 
 </ul>
