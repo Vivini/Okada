@@ -1,2 +1,31 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+	<div class="banner">
+     <%= image_tag "homebanner.png", alt: "alttext", width: 350 %>
+	</div>
+	
+
+	<div class="home-searchform">
+     <form id="searchForm">
+        <input type="text" id="address" class="form-control" placeholder="Find a cargo bike in your city">
+        <a class="btn btn-warning" href="bikes/" role="button">Search</a>
+      </form>
+    </div>
+
+    <div class="card1"> 
+      <h4>You want to rent a cargo bike?</h4>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+
+     <div class="card2"> 
+      <h4>You already have a cargo bike?</h4>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <div id="homepage-btn">
+    	<a class="btn btn-warning" href="bikes/" role="button">Rent it</a>
+    	<a class="btn btn-warning" href="#" role="button">FAQ</a>
+    </div>
+</div>
+
+
+

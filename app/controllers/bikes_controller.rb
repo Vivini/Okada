@@ -1,13 +1,16 @@
 class BikesController < ApplicationController
+ #before_action :set_bike, only: [:show]
+
   def index
    @bikes = Bike.all
   end
-  
-  def new
-    @bike = Bike.new
+  def show
+     @bike = Bike.find(params[:id])
   end
 
-  def create
+  # private
 
-  end
+  # def set_bike
+  #   @bike = Bike.find(params[:id])
+  # end
 end
