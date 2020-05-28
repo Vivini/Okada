@@ -4,16 +4,11 @@
     	<div class="card-product">
          <div class="card-product-infos" justify="center">
 		    <h2><%= bike.bike_type %></h2>
-		    <div class="card-img"><%= link_to(image_tag(bike.img_url, :alt =>  "alt text"), bike_path(bike)) %>
-        </div>
-		    <p><%= bike.model %></p>
-		    <p>Price/day € <strong><%= "%0.2f" % bike.price %></strong> only.</p>
+		    <%= link_to(image_tag("cargobike.png", :alt =>  "alt text"), bike_path(bike)) %>
+		    <p>Product description with <strong>relevant info</strong> only.</p>
+		    <p>Price/day <strong>20 EUR</strong> only.</p>
 		  </div>
-      <div class="btn-details">
-        <%= link_to "Details", bike_path(bike), class: "btn btn-warning" %>
-        </div>
           <% end %>
       </div>
-  </li>
+  </li> 
 </ul>
-
