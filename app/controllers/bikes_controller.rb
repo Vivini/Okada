@@ -8,9 +8,26 @@ class BikesController < ApplicationController
      @bike = Bike.find(params[:id])
   end
 
-  # private
+  def new
+    @bike = Bike.new
+  end
 
-  # def set_bike
-  #   @bike = Bike.find(params[:id])
-  # end
+  def create
+    @bike = Bike.new(bike_params)
+    if @bike.save
+      redirect_to bike_path(@bike)
+    else
+      render :new
+    end
+  end
+
+   private
+
+   def set_bike
+     @bike = Bike.find(params[:id])
+   end
+  
+  def bike_params
+    params.require(:bike).permit(:model, :bike_type, :capacity, :price, :address, :image_url)
+  end
 end

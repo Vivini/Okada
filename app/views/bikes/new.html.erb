@@ -6,15 +6,22 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" } %>
-     <%= f.input :bike_type,
+    <%= f.input :bike_type,
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
-     <%= f.input :capacity,
+    <%= f.input :capacity,
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
-   </div> %> %>
+    <%= f.input :price,
+                required: true,
+                input_html: { autocomplete: "current-password" } %>
+    <%= f.input :address,
+                required: true,
+                input_html: { autocomplete: "current-password" } %>
+    <%= f.file_field :image_url, accept: 'image/png,image/jpeg', required: true %>
+  </div>
 
-   <div class="form-actions">
-    <%= f.button :submit, "Submit an Offer" %>
-   </div> %>
-<% end %>  %> %> %>
+  <div class="form-actions">
+    <%= f.button :submit, "Make an Offer" %>
+  </div>
+<% end %>
