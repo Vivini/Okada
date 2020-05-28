@@ -16,6 +16,7 @@ class BikesController < ApplicationController
     @bike = Bike.new(bike_params)
     if @bike.save
       redirect_to bike_path(@bike)
+      #render :show
     else
       render :new
     end
@@ -28,6 +29,6 @@ class BikesController < ApplicationController
    end
   
   def bike_params
-    params.require(:bike).permit(:model, :bike_type, :capacity, :price, :address, :image_url)
+    params.require(:bike).permit(:model, :bike_type, :capacity, :price, :address, :img_url)
   end
 end

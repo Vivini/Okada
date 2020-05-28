@@ -8,6 +8,7 @@
                 input_html: { autocomplete: "email" } %>
     <%= f.input :bike_type,
                 required: true,
+                autofocus: true,
                 input_html: { autocomplete: "current-password" } %>
     <%= f.input :capacity,
                 required: true,
@@ -18,7 +19,7 @@
     <%= f.input :address,
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
-    <%= f.file_field :image_url, accept: 'image/png,image/jpeg', required: true %>
+    <%= f.file_field :img_url, accept: 'image/png,image/jpeg', required: true %>
   </div>
 
   <div class="form-actions">
