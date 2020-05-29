@@ -79,6 +79,12 @@ h1, h2, h3, h4 {
   color: white;
 }
 
+#orange-circle-footer img {
+  width: 30%;
+  left: -5px;
+  position: absolute;
+}
+
 /* overwriting bootstrap from defaults */
 
 #search-form {
@@ -165,6 +171,7 @@ h1, h2, h3, h4 {
 
 .form-control {
   margin-top: 0px;
+  margin-bottom: 14px;
   border-radius: 10px;
   border-style: none;
   height: 50px;
