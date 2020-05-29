@@ -1,10 +1,12 @@
 <div class="container">
-	<h4>Send a Booking Request</h4>
-  <%= simple_form_for [ @bike, @booking ] do |f| %>
-    <div class= "form-group">
-      <%= f.input :start_date, class: "form-control" %>
-      <%= f.input :end_date, class: "form-control" %>
-      <%= f.submit "Send request", class: "button-filled" %>
-    </div>
-  <% end %>
+    <h2>Send a booking request</h2>
+
+<%= simple_form_for [ @bike, @booking ] do |f| %>
+      <p><%= "From:" %></p>
+      <%= f.text_field :start_date, class: "form-control",  placeholder: "From:" %>
+      <p><%= "Until:" %></p>
+      <%= f.text_field :end_date, class: "form-control",  placeholder: "Until:"  %>
+  <%= f.submit "Send", class: "button-filled" %>
+<% end %>
+
 </div>
