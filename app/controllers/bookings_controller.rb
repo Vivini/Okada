@@ -21,10 +21,10 @@ class BookingsController < ApplicationController
     else
       @booking.price = 0
     end
-
-    if @booking.save
-      redirect_to bikes_path
-    else
+  # adding comments to test heroku
+    # if @booking.save
+    #   redirect_to bikes_path
+    # else
       redirect_to bikes_path
     end
   end
