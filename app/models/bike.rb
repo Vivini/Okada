@@ -1,5 +1,6 @@
 class Bike < ApplicationRecord
   belongs_to :user
+  has_many :bookings
   has_many_attached :photos
   validates :model, presence: true
   validates :bike_type, presence: true
