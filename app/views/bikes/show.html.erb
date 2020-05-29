@@ -8,6 +8,12 @@
       </ul>
         <%= image_tag('show_image_01.png', class:'cargo-image', alt: 'Cargo Image', style: 'margin: 19px auto; width: 375px;')%>
       <li><button type="button" class="btn btn-warning">DETAILS</button></li>
+      <% if current_user == @bike.user %>
+        <%= link_to 'Edit', edit_bike_path(@bike) %>
+        <% end %>
+        <% if current_user == @bike.user %>
+        <%= link_to 'Delete', bike_path(@bike) %>
+        <% end %>
     </div>
   </div>
 </div>

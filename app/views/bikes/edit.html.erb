@@ -1,4 +1,3 @@
-<h2>Offer a Bike</h2>
 <%= simple_form_for @bike do |f| %>
       <div class="form-inputs">
         <%= f.input :model,
@@ -21,7 +20,6 @@
         <%= f.file_field :photo %>
       </div>
       <div class="form-actions">
-        <%= f.button :submit, "Make an Offer" %>
+        <%= f.button :submit, "Update Bike" %>
       </div>
 <% end %>
-    
