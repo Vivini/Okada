@@ -1,0 +1,11 @@
+
+<h2>Modify my booking</h2>
+<div class="container">
+  <%= simple_form_for [ @booking ] do |f| %>
+    <div class= "form-group">
+      <%= f.input :start_date, class: "form-control" %>
+      <%= f.input :end_date, class: "form-control" %>
+      <%= f.submit "Send request", data: { confirm: "Go ahead with the change?" }, class: "form-control btn btn-info" %>
+    </div>
+  <% end %>
+</div>
