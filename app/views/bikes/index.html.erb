@@ -1,19 +1,26 @@
-<ul>
-  <% @bikes.each do |bike| %>
-    <li class="card">
-    	<div class="card-product">
-         <div class="card-product-infos" justify="center">
-		    <h2><%= bike.bike_type %></h2>
-		    <div class="card-img"><%= link_to(image_tag(bike.img_url, :alt =>  "alt text"), bike_path(bike)) %>
+<div class="container">
+  <ul>
+    <% @bikes.each do |bike| %>
+      <li class="card">
+      	<div class="card-product">
+          <div class="card-product-infos">
+  		    <!--<h2><%= bike.bike_type %></h2>-->
+  		    <div class="card-img"><%= link_to(image_tag(bike.img_url, :alt =>  "alt text"), bike_path(bike)) %>
+          </div>
+  		    <!--<p><%= bike.model %></p>
+  		    <p>Price/day € <strong><%= "%0.2f" % bike.price %></strong> only.</p>
+  		  </div>-->
+        <div class="info">
+          <div class="btn-details">
+            <%= link_to "DETAILS", bike_path(bike) %>
+          </div>
+          <div class="btn-outline">
+            <a><%= "%0.2f" % bike.price %> €</a>
+          </div>
         </div>
-		    <p><%= bike.model %></p>
-		    <p>Price/day € <strong><%= "%0.2f" % bike.price %></strong> only.</p>
-		  </div>
-      <div class="btn-details">
-        <%= link_to "Details", bike_path(bike), class: "btn btn-warning" %>
+      <% end %>
         </div>
-          <% end %>
-      </div>
-  </li>
-</ul>
+    </li>
+  </ul>
+</div>
 
