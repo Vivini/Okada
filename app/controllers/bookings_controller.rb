@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
   def create
     @bike = Bike.find(params[:bike_id])
     @booking = Booking.new(booking_params)
-    @bike.booking = @bike
+    @booking.bike = @bike
     @booking.user = current_user
     @booking.status = "Pending"
     
