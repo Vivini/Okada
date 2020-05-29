@@ -1,13 +1,25 @@
 <div class="show-container col-sm-12">
-  <div class="image-box", style="width: 375px;">
-    <div class="cargo-size">
-      <ul>
-        <li><button type="button" class="btn btn-secondary">S</button></li>
-        <li><button type="button" class="btn btn-secondary">M</button></li>
-        <li><button type="button" class="btn btn-orange">L</button></li>
-      </ul>
-        <%= image_tag('show_image_01.png', class:'cargo-image', alt: 'Cargo Image', style: 'margin: 19px auto; width: 375px;')%>
-      <li><button type="button" class="btn btn-warning">DETAILS</button></li>
-    </div>
+  <div class="cargo-size">
+    <ul>
+      <li><button type="button" class="btn btn-secondary">S</button></li>
+      <li><button type="button" class="btn btn-secondary">M</button></li>
+      <li><button type="button" class="btn btn-orange">L</button></li>
+    </ul>
+  </div>
+  <div class="banner-datails">
+    <%= image_tag "image_show_placeholder.jpg", alt: "Cargo bike image" %>
+  </div>
+  <div class="card-show card-desciption">
+      <h2>Omnium Cargo<br>Large</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur<br>
+        sadipscing elitr, sed diam nonumy eirmod<br>
+        tempor invidunt ut labore et dolore.
+        </p>
+  </div>
+  <div id="showpage-btn">
+    <a class="button-outline" href="#" role="button">NO THANKS</a>
+    <a class="btn-filled" href="bikes/" role="button">RENT CARGO</a>
+  </div>
+  <div class="map-box">
   </div>
 </div>
