@@ -13,16 +13,17 @@
       <h2><%= @bike.bike_type %> <%=@bike.capacity %></h2>
         <p>You could rent this bike from <%=@bike.user.user_name.capitalize! %>!</p>
         <p> It is located at <%= @bike.address %><br>
+          <br>
+          <strong>€<%= "%0.2f" % @bike.price %> per day</strong>
         </p>
   </div>
   <div id="showpage-btn">
-    <a class="button-outline" href="bikes/" role="button">NO THANKS</a>
-    <a class="btn-filled" href="bikes/" role="button">RENT CARGO</a>
+    <%= link_to "NO THANKS", bikes_path, class: "button-outline" %>
+    <%= link_to "RENT CARGO", new_bike_booking_path(@bike), class: "btn-filled" %>
   </div>
 <!--   <div class="map-box"> -->
   </div>
 </div>
-
 
 
 
