@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
   end 
 
   def create
-    @bike = bike.find(params[:bike_id])
+
     @booking = Booking.new(booking_params)
     @booking.bike = @bike
     @booking.user = current_user
@@ -22,9 +22,9 @@ class BookingsController < ApplicationController
     end
 
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to bike_booking_path
     else
-      redirect_to bike_path(@bike)
+      render :new
     end
   end
 
@@ -37,7 +37,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.status = "Pending"
     @booking.save!
-    redirect_to booking_path(@booking)
+    redirect_to bike_booking_path
   end
 
   def destroy
