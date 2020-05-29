@@ -1,0 +1,28 @@
+p {
+  line-height: 23px;
+  opacity: 0.7;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto', sans-serif;
+  line-height: 30px;
+}
+
+.container-new {
+  width: 350px;
+  margin: auto;
+}
+
+.container-new h2 {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.button-filled a {
+  color: white;
+  font-weight: 600;
+  font-size: 11px;
+  opacity: 1;
+}
