@@ -6,5 +6,5 @@ class Bike < ApplicationRecord
   validates :capacity, presence: true
   validates :price, presence: true
   validates :address, presence: true
-  #validates :img_url, presence: true
+  validates :img_url, presence: true
 end
