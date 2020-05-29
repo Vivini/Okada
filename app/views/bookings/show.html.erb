@@ -1,0 +1,12 @@
+<div class="container">
+    <h3><%= @bike.bike_type %></h3>
+    <p><%= @bike.model %></p>
+    <p><strong>Address: </strong> <%= @bike.address %></p>
+    <p><strong> Dates: </strong><%= @ooking.start_date %> to <%= @booking.end_date  %></p>
+    <p><strong>Price: </strong> <%= @booking.price %></p>
+    <%= link_to "Cancel booking", booking_path(@booking), method: :delete, data: { confirm: "Are you sure you want to cancel this booking?" }, class: "btn btn-info mb-3"  %>
+    <br>
+    <%= link_to "modify dates", edit_booking_path(@booking), class: "btn btn-info mb-3"  %>
+    <br>
+    <%= link_to "Back", bookings_path,  class: "btn btn-info"  %>
+</div>

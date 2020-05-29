@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="orange-circle-big">
      <%= image_tag "big_circle_home.png", alt: "Orange circle left" %>
@@ -11,36 +12,31 @@
 	<div class="home-searchform">
      <form id="search-form">
         <input type="text" id="address" class="form-control" placeholder="Type in your city">
-          <a class="button-filled" href="bikes/" role="button">SEARCH</a>
+        <br>
+        <input type="date" placeholder="From" class="form-control" name="start_date" data-id="rangePlugin" id="start_date">
+         <br>
+        <input type="date" placeholder="Until" class="form-control datepicker" name="end_date" id="secondRangeInput">
+        <a class="button-filled" href="bikes/" role="button">SEARCH</a>
       </form>
     </div>
 
     <div class="card-home">
       <h2>You want to rent<br>a cargo bike?</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua.<br><br>At vero eos et accusam et justo duo dolores et ea rebum.
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <p>When you have to move heavy items, but still wish to stay green! Search your preferred area for cargo bikes.
         </p>
     </div>
     <div class="card-home card-banner">
       <h2>You already have<br>a cargo bike?</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-        sed diam nonumy eirmod tempor invidunt.
+        <p>Check the details below, on how you can rent out your own bike. 
         </p>
     </div>
     <div id="homepage-btn">
-    	<a class="btn-filled" href="bikes/" role="button">RENT IT</a>
-    	<a class="button-outline" href="#" role="button">FAQ</a>
+      <%= link_to "RENT OUT", new_bike_path, class: "button-filled" %>
+    	<a class="button-filled" href="#">FAQ</a>
     </div>
     <div class="card-home">
       <h2>You want to build<br>your own cargo bike?</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua.
+        <p>We have instructions for you. Please follow at own risk! 
         </p>
     </div>
 </div>
-
-
-
