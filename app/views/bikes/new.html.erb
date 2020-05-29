@@ -1,8 +1,9 @@
-<h2>Offer a Bike</h2>
+<div class="container-new">
+<h2>What kind of cargo<br>would you like to offer?</h2>
 <%= simple_form_for @bike do |f| %>
       <div class="form-inputs">
         <%= f.input :model,
-               required: true,
+                required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" } %>
         <%= f.input :bike_type,
@@ -20,8 +21,8 @@
                 input_html: { autocomplete: "current-password" } %>
         <%= f.input :img_url %>
       </div>
-      <div class="form-actions">
-        <%= f.button :submit, "Make an Offer" %>
+      <div class="button-filled">
+        <a><%= f.button :submit, "ADD A CARGO" %></a>
       </div>
 <% end %>
-    
+</div>
