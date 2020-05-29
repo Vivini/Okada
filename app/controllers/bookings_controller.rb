@@ -23,9 +23,9 @@ class BookingsController < ApplicationController
     end
 
     if @booking.save
-      redirect_to bike_bookings_path
+      redirect_to bikes_path
     else
-      render :new
+      redirect_to bikes_path
     end
   end
 
