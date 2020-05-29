@@ -5,13 +5,14 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @bike = Bike.find(params[:bike_id])
   	@booking = Booking.new
   end 
 
   def create
-
+    @bike = Bike.find(params[:bike_id])
     @booking = Booking.new(booking_params)
-    @booking.bike = @bike
+    @bike.booking = @bike
     @booking.user = current_user
     @booking.status = "Pending"
     
@@ -22,18 +23,20 @@ class BookingsController < ApplicationController
     end
 
     if @booking.save
-      redirect_to bike_booking_path
+      redirect_to bike_bookings_path
     else
       render :new
     end
   end
 
   def show
+    @bike = Bike.find(params[:bike_id])
     @booking = Booking.find(params[:id])
-    @booking = @booking.bike
+    @booking = @bike.booking
   end
 
   def update
+    @bike = Bike.find(params[:bike_id])
     @booking = Booking.find(params[:id])
     @booking.status = "Pending"
     @booking.save!
@@ -41,6 +44,7 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    @bike = Bike.find(params[:bike_id])
     @booking = Booking.find(params[:id])
     @booking.destroy
     redirect_to root_path
