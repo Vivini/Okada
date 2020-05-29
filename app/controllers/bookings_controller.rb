@@ -26,7 +26,7 @@ class BookingsController < ApplicationController
     #   redirect_to bikes_path
     # else
       redirect_to bikes_path
-    end
+    
   end
 
   def show
