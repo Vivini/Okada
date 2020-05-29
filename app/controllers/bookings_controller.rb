@@ -1,5 +1,9 @@
 class BookingsController < ApplicationController
 
+  def index
+    @bookings = Booking.all
+  end
+
   def new
   	@booking = Booking.new
   end 
@@ -25,19 +29,19 @@ class BookingsController < ApplicationController
   end
 
   def show
-    set_booking
-    @bed = @booking.bike
+    @booking = Booking.find(params[:id])
+    @booking = @booking.bike
   end
 
   def update
-    set_booking
+    @booking = Booking.find(params[:id])
     @booking.status = "Pending"
     @booking.save!
     redirect_to booking_path(@booking)
   end
 
   def destroy
-    set_booking
+    @booking = Booking.find(params[:id])
     @booking.destroy
     redirect_to root_path
   end
@@ -47,10 +51,5 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:price, :start_date, :end_date, :status)
   end
-
-  def set_booking
-    @booking = Booking.find(params[:id])
-  end
-
 
 end
