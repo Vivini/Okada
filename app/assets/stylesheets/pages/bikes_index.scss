@@ -1,55 +1,79 @@
-.card { margin: 19px auto;
-	    text-align: center;
-        background-color: #f4f4f4;
-        border: none;
-    }
+body { font-family: 'Roboto', sans-serif;
+     background-color: #F4F4F4;
+}
 
-body ul {
-	padding: 0px;
+p {
+  line-height: 23px;
+  opacity: 0.7;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto', sans-serif;
+  line-height: 30px;
+}
+
+.container {
+  width: 350px;
+  margin: auto;
+  padding: 0px;
+  text-align: center;
+}
+
+.container ul {
+  padding: 0px;
+  border-radius: 10px;
 }
 
 
-.card-product {
-  overflow: hidden;
-  height: auto;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  text-align: center;
-  display: flex;
-  align-items: center;
-  margin: auto;
+.card {
+  width: 100%;
+  margin-bottom: 1rem;
+  box-shadow: 4px 7px 8px rgba(196, 196, 196, 0.3);
+  border-radius: 10px;
 }
 
 .card-product img {
-  height: 100%;
-  width: 300px;
-  object-fit: cover;
-  display: flex;
-  align-items:center;
+  border-radius: 10px;
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: fill;
 }
 
-.card-product h2 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0;
+.btn-details {
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  display: block;
+  padding: 10px 0px 10px 0px;
+  color: white !important;
+  font-weight: 600;
+  background-color: #F46B3A;
+  font-size: 11px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  width: 25%;
+  text-align: center;
+  box-shadow: none;
 }
 
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+.btn-outline {
+  position: absolute;
+  background-color: white;
+  top: 13px;
+  left: 110px;
+  border-color: #F46B3A;
+  border-radius: 5px;
+  border: 2px solid #F46B3A;
+  padding: 8px 0px 8px 0px;
+  font-size: 11px;
+  width: 20%;
+  text-align: center;
 }
 
-.card-product .card-product-infos {
-  padding: auto;
+.btn-outline a {
+  color: #F46B3A;
+  font-weight: 600;
+  font-size: 11px;
+  opacity: 1;
 }
-
-.card-img {
-    width: 200px;
-    height: 100px;
-    object-fit: cover;
-}
-
-
