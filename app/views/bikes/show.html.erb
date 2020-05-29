@@ -1,25 +1,29 @@
 <div class="show-container col-sm-12">
-  <div class="cargo-size">
+<!--   <div class="cargo-size">
     <ul>
       <li><button type="button" class="btn btn-secondary">S</button></li>
       <li><button type="button" class="btn btn-secondary">M</button></li>
       <li><button type="button" class="btn btn-orange">L</button></li>
     </ul>
-  </div>
+  </div> -->
   <div class="banner-datails">
-    <%= image_tag "image_show_placeholder.jpg", alt: "Cargo bike image" %>
+    <%= image_tag @bike.img_url, alt: "Cargo bike image" %>
   </div>
   <div class="card-show card-desciption">
-      <h2>Omnium Cargo<br>Large</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur<br>
-        sadipscing elitr, sed diam nonumy eirmod<br>
-        tempor invidunt ut labore et dolore.
+      <h2><%= @bike.bike_type %> <%=@bike.capacity %></h2>
+        <p>You could rent this bike from <%=@bike.user.user_name.capitalize! %>!</p>
+        <p> It is located at <%= @bike.address %><br>
         </p>
   </div>
   <div id="showpage-btn">
-    <a class="button-outline" href="#" role="button">NO THANKS</a>
+    <a class="button-outline" href="bikes/" role="button">NO THANKS</a>
     <a class="btn-filled" href="bikes/" role="button">RENT CARGO</a>
   </div>
-  <div class="map-box">
+<!--   <div class="map-box"> -->
   </div>
 </div>
+
+
+
+
+
